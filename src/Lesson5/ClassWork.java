@@ -1,6 +1,7 @@
 package Lesson5;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -117,7 +118,52 @@ public class ClassWork {
 
         System.out.println("Индекс последнего элемента John " + names.lastIndexOf("John"));
 
+        List<String> list = new ArrayList<>();
+        list.add("1");
+        list.add("2");
+        list.add("3");
 
+        List<String> list2 = new ArrayList<>();
+        list2.add("One");
+        list2.add("Two");
+        list2.add("Three");
+        list2.add("Four");
+        list2.add("Five");
+        System.out.println("До копирования: " + list2);
+        Collections.copy(list2,list);
+        System.out.println("Лист после копирования: " + list2);
+
+        //Способ нахождения минимума и максимума
+        List<String> first1 = new ArrayList<>();
+        first1.add("Z");
+        first1.add("D");
+        first1.add("A");
+        first1.add("L");
+        first1.add("J");
+        System.out.println(first1);
+
+        System.out.println(Collections.min(first1));
+        System.out.println(Collections.max(first1));
+
+        //swap
+        //[A,B,C,D,E] -> first1,0,4;
         //
+
+        Collections.swap(first1,0,3);
+        System.out.println(first1);
+
+        List<String> list_Strings = new ArrayList<>();
+        list_Strings.add("Red");
+        list_Strings.add("Black");
+        list_Strings.add("Blue");
+        list_Strings.add("Yellow");
+        list_Strings.add("White");
+        list_Strings.add("Purple");
+
+        System.out.println(list_Strings);
+        list_Strings.set(2,"Green");
+        System.out.println(list_Strings);
+
+
     }
 }
