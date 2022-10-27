@@ -39,6 +39,22 @@ public class Solution {
                         System.out.println(todoList.get(j));
                     }
                     break;
+                }else if(naSlova[0].equals("EDIT") && naSlova.length > 3) {
+                    todoList.set(Integer.parseInt(naSlova[1]) - 1, naSlova[2] + " " + naSlova[3]);
+                    System.out.println("Вы заменили дело в позции номер: " + naSlova[1] + " на: " + naSlova[2] +
+                            "\n Измененный список дел");
+                    for (int j = 0; j < todoList.size(); j++) {
+                        System.out.println(todoList.get(j));
+                    }
+                    break;
+                } else if (naSlova[0].equals("DELETE") && naSlova.length==2) { //DELETE 2 - удалит купить молоко
+                    System.out.println("Вы удалили дело: " + todoList.get(Integer.parseInt(naSlova[1])-1)+
+                            ", которое было в позиции номер: " + naSlova[1] );
+                    todoList.remove(Integer.parseInt(naSlova[1])-1);
+                    for (int j = 0; j < todoList.size(); j++) {
+                        System.out.println(todoList.get(j));
+                    }
+                    break;
                 }
                 else {
                     System.out.println("Не верная команда. Вызовите правильную");
