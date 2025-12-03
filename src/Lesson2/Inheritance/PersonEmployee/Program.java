@@ -7,7 +7,7 @@ public class Program {
     public static void main(String[] args) {
         Person tom = new Person("Tom", 23);
     tom.display();
-    Employee sam = new Employee("Sam", "Microsoft");
+    Employee sam = new Employee("Sam", "Microsoft", "Senior Developer");
     sam.display();
 
 
